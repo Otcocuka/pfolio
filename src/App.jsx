@@ -1,43 +1,88 @@
-// import { useState } from "react";
+import { useEffect, useState} from 'react';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import About from './pages/About';
+import { BrowserRouter as Router, Route, Link, Routes, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet } from 'react-router-dom';
+
 import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Works from "./components/Works";
+
+
+
+
+
 
 function App() {
   // const [count, setCount] = useState(0);
+  
+
+
+ 
+
+
+
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<Root/>}>
+        <Route index element={<Home/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/about" element={<About/>}/>
+      </Route>
+    )
+  )
+
+
 
   return (
-    // <>
-    //   <div>
-    //     <a href="https://vitejs.dev" target="_blank">
-    //       <img src={viteLogo} className="logo" alt="Vite logo" />
-    //     </a>
-    //     <a href="https://react.dev" target="_blank">
-    //       <img src={reactLogo} className="logo react" alt="React logo" />
-    //     </a>
-    //   </div>
-    //   <h1>Vite + React</h1>
-    //   <div className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </div>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </>
-    <>
-      <Header/>
-      <Hero/>
-      <Works workID='some old work' tags={['building','motion','direction']} description='did it long time ago'/>
 
-      <Works/>
+    <>
+
+      
+      <div>
+          <RouterProvider router={router}/>
+        </div>
+      <Outlet/>
+      
     </>
   );
+}
+
+const Root=()=> {
+  function useScrollDirection() {
+    const [scrollDirection, setScrollDirection] = useState(null);
+  
+    useEffect(() => {
+      let lastScrollY = window.pageYOffset;
+  
+      const updateScrollDirection = () => {
+        const scrollY = window.pageYOffset;
+        const direction = scrollY > lastScrollY ? "down" : "up";
+        if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
+          setScrollDirection(direction);
+        }
+        lastScrollY = scrollY > 0 ? scrollY : 0;
+      };
+      window.addEventListener("scroll", updateScrollDirection); // add event listener
+      return () => {
+        window.removeEventListener("scroll", updateScrollDirection); // clean up
+      }
+    }, [scrollDirection]);
+  
+    return scrollDirection;
+  }
+  const scrollDirection = useScrollDirection();
+  return(
+    <>
+    <div className={`header ${ scrollDirection === "down" ? "hide" : "show"}`}>
+      <Link to='/'>Home</Link>
+      <Link to='/contact'>Contacts</Link>
+      <Link to='/about'>About</Link>
+    </div>
+    <div>
+      <Outlet/>
+    </div>
+    </>
+  )
 }
 
 export default App;

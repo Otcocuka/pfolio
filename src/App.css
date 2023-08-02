@@ -50,6 +50,7 @@
   color: white;
   font-size: 30px;
   line-height: 30px;
+  
 }
 body {
   overflow-x: hidden;
@@ -57,6 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-behavior: smooth
 }
 .header {
   position: fixed;
