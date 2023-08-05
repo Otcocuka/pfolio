@@ -5,6 +5,7 @@ import About from './pages/About';
 import { BrowserRouter as Router, Route, Link, Routes, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet } from 'react-router-dom';
 
 import "./App.css";
+import Resume from './pages/Resume';
 
 
 
@@ -14,31 +15,22 @@ import "./App.css";
 function App() {
   // const [count, setCount] = useState(0);
   
-
-
- 
-
-
-
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<Root/>}>
         <Route index element={<Home/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/resume" element={<Resume/>}/>
       </Route>
     )
   )
-
-
-
   return (
 
     <>
 
       
-      <div>
+      <div className='router--provider'>
           <RouterProvider router={router}/>
         </div>
       <Outlet/>
@@ -71,12 +63,16 @@ const Root=()=> {
     return scrollDirection;
   }
   const scrollDirection = useScrollDirection();
+
+
+  
   return(
     <>
     <div className={`header ${ scrollDirection === "down" ? "hide" : "show"}`}>
       <Link to='/'>Home</Link>
       <Link to='/contact'>Contacts</Link>
       <Link to='/about'>About</Link>
+      <Link to='/resume'>Resume</Link>
     </div>
     <div>
       <Outlet/>
