@@ -17,7 +17,7 @@ const ContactForm = () => {
     console.log(formData);
     let apiToken = "6091232201:AAFeK7pA7uJID96rEkiMmH649rdLvE4Pyo0";
   let chatId = "@salskdjhhakgjfhakjhwkdjbmzxjchzb";
-  let text = "Hello world!";
+  let text = `email:${formData.email};  name:${formData.name};  message:${formData.message};`;
 
   let urlString = `https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${text}`;
 
