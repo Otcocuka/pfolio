@@ -1,14 +1,19 @@
-import { useEffect, useState} from 'react';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import About from './pages/About';
+import {  useEffect, useState, React} from 'react';
+// import Contact from './pages/Contact';
+// import About from './pages/About';
 import { BrowserRouter as Router, Route, Link, Routes, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet } from 'react-router-dom';
-
 import "./App.css";
-import Resume from './pages/Resume';
+// import Resume from './pages/Resume';
+import loadable from '@loadable/component'
 
 
 
+const Contact = loadable(() => import('./pages/Contact'))
+const About = loadable(() => import('./pages/About'))
+const Resume = loadable(() => import('./pages/Resume'))
+const Home = loadable(() => import('./pages/Home'))
+
+ 
 
 
 
@@ -17,6 +22,8 @@ function App() {
   
   const router = createBrowserRouter(
     createRoutesFromElements(
+
+      
       <Route exact path='/pfolio/' element={<Root/>}>
         <Route index element={<Home/>}/>
         <Route exact path="/pfolio/contact" element={<Contact/>}/>
@@ -31,17 +38,19 @@ function App() {
 
       
       <div className='router--provider'>
-      {/* basename={import.meta.env.DEV ? '/' : '/pfolio/'} */}
           <RouterProvider  router={router}/>
         </div>
-      <Outlet/>
+        
+        <Outlet />
       
+        
     </>
   );
 }
 
 const Root=()=> {
   function useScrollDirection() {
+    
     const [scrollDirection, setScrollDirection] = useState(null);
   
     useEffect(() => {
@@ -70,16 +79,19 @@ const Root=()=> {
   return(
     <>
     <div className={`header ${ scrollDirection === "down" ? "hide" : "show"}`}>
-      <Link to='/pfolio/'>Home</Link>
-      <Link to='/pfolio/contact'>Contacts</Link>
-      <Link to='/pfolio/about'>About</Link>
-      <Link to='/pfolio/resume'>Resume</Link>
+      <Link className='header_link' to='/pfolio/'>Home</Link>
+      <Link className='header_link' to='/pfolio/contact'>Contacts</Link>
+      <Link className='header_link' to='/pfolio/about'>About</Link>
+      <Link className='header_link' to='/pfolio/resume'>Resume</Link>
     </div>
-    <div>
+    <div>    
+
       <Outlet/>
+    
     </div>
     </>
   )
 }
+
 
 export default App;

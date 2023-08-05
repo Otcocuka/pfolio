@@ -29,7 +29,7 @@ const Works = (props) => {
           </div>
         </div>
         <div className="work_frame">
-          <img className='work_frame__image' src={img} alt="#" />
+          <img className='work_frame__image' loading='lazy' src={img} alt="#" />
         </div>
 
       </div>
