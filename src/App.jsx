@@ -31,7 +31,7 @@ function App() {
 
       
       <div className='router--provider'>
-          <RouterProvider router={router}/>
+          <RouterProvider basename={import.meta.env.DEV ? '/' : '/pfolio/'} router={router}/>
         </div>
       <Outlet/>
       
