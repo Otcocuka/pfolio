@@ -2,7 +2,7 @@
   "name": "webcome",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://web-come.test.first.com/",
+  "homepage": "https://otcocuka.github.io/pfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
