@@ -17,11 +17,11 @@ function App() {
   
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route exact path='/' element={<Root/>}>
+      <Route exact path='/pfolio/' element={<Root/>}>
         <Route index element={<Home/>}/>
-        <Route exact path="/contact" element={<Contact/>}/>
-        <Route exact path="/about" element={<About/>}/>
-        <Route exact path="/resume" element={<Resume/>}/>
+        <Route exact path="/pfolio/contact" element={<Contact/>}/>
+        <Route exact path="/pfolio/about" element={<About/>}/>
+        <Route exact path="/pfolio/resume" element={<Resume/>}/>
       </Route>
     )
   )
@@ -31,7 +31,8 @@ function App() {
 
       
       <div className='router--provider'>
-          <RouterProvider basename={import.meta.env.DEV ? '/' : '/pfolio/'} router={router}/>
+      {/* basename={import.meta.env.DEV ? '/' : '/pfolio/'} */}
+          <RouterProvider  router={router}/>
         </div>
       <Outlet/>
       
@@ -69,10 +70,10 @@ const Root=()=> {
   return(
     <>
     <div className={`header ${ scrollDirection === "down" ? "hide" : "show"}`}>
-      <Link to='/'>Home</Link>
-      <Link to='/contact'>Contacts</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/resume'>Resume</Link>
+      <Link to='/pfolio/'>Home</Link>
+      <Link to='/pfolio/contact'>Contacts</Link>
+      <Link to='/pfolio/about'>About</Link>
+      <Link to='/pfolio/resume'>Resume</Link>
     </div>
     <div>
       <Outlet/>
