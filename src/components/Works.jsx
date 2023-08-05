@@ -24,7 +24,7 @@ const Works = (props) => {
           <div className="work_body">
             <div className="work_description">{props.description}</div>
             <div className="work_button__demo">
-              <button>Try demo</button>
+              <button>Try demo.</button>
             </div>
           </div>
         </div>
