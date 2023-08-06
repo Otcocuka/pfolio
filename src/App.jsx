@@ -1,9 +1,6 @@
 import {  useEffect, useState, React} from 'react';
-// import Contact from './pages/Contact';
-// import About from './pages/About';
 import { BrowserRouter as Router, Route, Link, Routes, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet } from 'react-router-dom';
 import "./App.css";
-// import Resume from './pages/Resume';
 import loadable from '@loadable/component'
 
 
@@ -12,13 +9,13 @@ const Contact = loadable(() => import('./pages/Contact'))
 const About = loadable(() => import('./pages/About'))
 const Resume = loadable(() => import('./pages/Resume'))
 const Home = loadable(() => import('./pages/Home'))
+const HelpYourself = loadable(() => import('./pages/HelpYourself'))
 
  
 
 
 
 function App() {
-  // const [count, setCount] = useState(0);
   
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -29,6 +26,7 @@ function App() {
         <Route exact path="/pfolio/contact" element={<Contact/>}/>
         <Route exact path="/pfolio/about" element={<About/>}/>
         <Route exact path="/pfolio/resume" element={<Resume/>}/>
+        <Route exact path="/pfolio/helpyourself" element={<HelpYourself/>}/>
       </Route>
     )
   )
@@ -83,6 +81,8 @@ const Root=()=> {
       <Link className='header_link' to='/pfolio/contact'>Contacts</Link>
       <Link className='header_link' to='/pfolio/about'>About</Link>
       <Link className='header_link' to='/pfolio/resume'>Resume</Link>
+      <Link className='header_link' to='/pfolio/helpyourself'>HelpYourself</Link>
+      
     </div>
     <div>    
 
