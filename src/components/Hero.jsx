@@ -1,10 +1,10 @@
 
 
-function Hero(props) {
+function Hero({data = "Hi there! I'm  Damir Farziev"}) {
 
   return (
     <div className="hero">
-        <h1>'Hi there! I&apos;m  Damir Farziev'</h1>
+        <h1>{data}</h1>
     </div>
   )
 }
