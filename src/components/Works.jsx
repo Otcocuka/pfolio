@@ -8,7 +8,7 @@ const Works = (props) => {
     workID:'some random work',
     tags:['design','building','motion','direction'],
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in exercitationem perspiciatis laborum libero odit debitis, odio saepe facilis placeat obcaecati? Nulla possimus dolores ratione aliquam, quae ab quis aliquid?', 
-    img: '../assets/dveri-i-dot.png',
+    img: './dveri-i-dot.png',
     button_link: '#'
  }
   
