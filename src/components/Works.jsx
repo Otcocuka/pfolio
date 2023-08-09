@@ -1,4 +1,4 @@
-import img from '../assets/6477e6ee4ccf26b8e50d0736_3-p-2000.webp' 
+
 
 
 const Works = (props) => {
@@ -8,6 +8,8 @@ const Works = (props) => {
     workID:'some random work',
     tags:['design','building','motion','direction'],
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in exercitationem perspiciatis laborum libero odit debitis, odio saepe facilis placeat obcaecati? Nulla possimus dolores ratione aliquam, quae ab quis aliquid?', 
+    img: '../public/dveri-i-dot.png',
+    button_link: '#'
  }
   
   return (
@@ -16,7 +18,7 @@ const Works = (props) => {
        
         <div className="work_card">
           <div className="work_header">
-            <div className="works_name">{props.workID}</div>
+            <h2 className="works_name">{props.workID}</h2>
             <div className="work_tags">{props.tags.map((tag)=>
               <span key={tag.toString()} className='tag'>{tag}</span>
             )}</div>
@@ -24,12 +26,14 @@ const Works = (props) => {
           <div className="work_body">
             <div className="work_description">{props.description}</div>
             <div className="work_button__demo">
-              <button>Try demo.</button>
+              <a href={props.button_link} target="_blank" rel="noopener noreferrer">
+              <button className="button-primary" >Try demo</button>
+              </a>
             </div>
           </div>
         </div>
         <div className="work_frame">
-          <img className='work_frame__image' loading='lazy' src={img} alt="#" />
+          <img className='work_frame__image' loading='lazy' src={props.img} alt="#" />
         </div>
 
       </div>
