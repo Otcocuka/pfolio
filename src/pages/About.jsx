@@ -1,3 +1,4 @@
+import Multilayer from "../components/Multilayer"
 
 
 const About = () => {
@@ -24,7 +25,13 @@ const About = () => {
         Я очень заинтересован в возможности присоединиться к вашей команде и внести свой вклад в успех ваших проектов. Надеюсь на положительный отклик и возможность обсудить детали в нашем будущем собеседовании.
       </p>
     </div>
-
+    
+    <Multilayer/>
+    <Multilayer styled='reversed_default'/>
+    <Multilayer/>
+    <Multilayer styled='style1'/>
+    <Multilayer styled='no-style'/>
+    
     </>
   )
 }

@@ -50,10 +50,15 @@
   color: white;
   font-size: 30px;
   line-height: 30px;
+  
   ::-webkit-scrollbar {
     width: 0;
   }
-  
+  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
 }
 body {
   overflow-x: hidden;
@@ -116,6 +121,7 @@ body {
 
 /* works */
 .works{
+  position: relative;
   transform: translateX(10%);
   height: 100vh;
   display: flex;
@@ -345,4 +351,81 @@ margin-top: 1rem;
 .hidden_block{
   display: block;
   margin-right: 20px ;
+}
+
+.layer_container{
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.layer_text{
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+.layer_block{
+  background-image: url('/public/image-full.png');
+  background-position: bottom;
+  background-size: cover;
+  z-index: 9;
+  position: absolute;
+  inset: 0;
+}
+.layer_block__bottom{
+  background-image: url('/public/image-bottom.png');
+  background-position: bottom;
+  background-size: cover;
+  z-index: 20;
+  position: absolute;
+  inset: 0;
+}
+
+.box1 {
+  transform: translateX(-50px);
+  width: 10rem;
+  height: 13rem;
+  border-radius: 1em;
+  background-color: turquoise;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  position: absolute;
+  top: 0;
+  background-image: url(/public/Laura.jpg);
+  background-size: 100% 100%;
+}
+
+.box2 {
+  transform: translateX(50px);
+  width: 5rem;
+  height: 6.5rem;
+  border-radius: 1em;
+  background-color: #f9f07e;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: translateX(50px);
+  -moz-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  position: absolute;
+  bottom: 0;
+  background-image: url(/public/Laura.jpg);
+  background-size: 100% 100%;
+}
+
+.works_text{
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  font-size: 100px;
+  line-height: 100px;
+  color: black;
+  z-index: -1000;
 }

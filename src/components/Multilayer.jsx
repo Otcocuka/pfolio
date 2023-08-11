@@ -1,21 +1,19 @@
 import React, { useRef } from "react";
 import { motion, progress, useScroll, useTransform } from "framer-motion";
 
-
-const Works = (props) => {
-
- 
- Works.defaultProps = {
-    workID:'some random work',
-    tags:['design','building','motion','direction'],
-    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in exercitationem perspiciatis laborum libero odit debitis, odio saepe facilis placeat obcaecati? Nulla possimus dolores ratione aliquam, quae ab quis aliquid?', 
-    img: './dveri-i-dot.png',
-    button_link: '#',
+function Multilayer(props) {
+  Multilayer.defaultProps = {
+    workID: "some random work",
+    tags: ["design", "building", "motion", "direction"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in exercitationem perspiciatis laborum libero odit debitis, odio saepe facilis placeat obcaecati? Nulla possimus dolores ratione aliquam, quae ab quis aliquid?",
+    img: "./dveri-i-dot.png",
+    button_link: "#",
     styled: "default",
     styledImage: "./Laura.jpg",
- }
-  
- const ref = useRef(null);
+  };
+
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -36,27 +34,32 @@ const Works = (props) => {
     }
   })
 
+
+
   return (
     <>
+   
+
       <div className="works">
-       
         <motion.div style={{ x: y3 }} className="works_text" id="text">asdasdasdasd</motion.div>
         <div className="work_card" ref={ref}>
           <div className="work_header">
             <h2 className="works_name">{props.workID}</h2>
-            <div className="work_tags">{props.tags.map((tag)=>
-              <span key={tag.toString()} className='tag'>{tag}</span>
-            )}</div>
           </div>
           <div className="work_body">
             <div className="work_description">{props.description}</div>
             <div className="work_button__demo">
-              <a href={props.button_link} target="_blank" rel="noopener noreferrer">
-              <button className="button-primary" >Try demo</button>
+              <a
+                href={props.button_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="button-primary">Try demo</button>
               </a>
             </div>
           </div>
         </div>
+
         {props.styled === "default" ? (
           <div className="work_frame ">
             <motion.div style={{ y: y1, x: "-100%" }} className="box1">
@@ -125,4 +128,4 @@ const Works = (props) => {
   );
 }
 
-export default Works;
+export default Multilayer;
