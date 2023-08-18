@@ -12,7 +12,8 @@ const Works = (props) => {
     img: './dveri-i-dot.png',
     button_link: '#',
     styled: "default",
-    styledImage: "./Laura.jpg",
+    styledImage1: "./Laura.jpg",
+    styledImage2: "./Laura.jpg",
  }
   
  const ref = useRef(null);
@@ -59,12 +60,12 @@ const Works = (props) => {
         </div>
         {props.styled === "default" ? (
           <div className="work_frame ">
-            <motion.div style={{ y: y1, x: "-100%" }} className="box1">
-              {" "}
-              <img src={props.styledImage} loading="lazy" alt="#" srcset="#" />
+            <motion.div style={{ y: y1, x: "-100%", backgroundImage: `url(${props.styledImage1})` }} className="box1">
+             
+              
             </motion.div>
             <motion.div
-              style={{ y: y2, x: "100%" }}
+              style={{ y: y2, x: "100%" , backgroundImage: `url(${props.styledImage2})`}}
               className="box2"
             ></motion.div>
             <img
@@ -76,8 +77,8 @@ const Works = (props) => {
           </div>
         ) : props.styled === "style1" ? (
           <div className="work_frame ">
-            <motion.div style={{ y: y1, x: "-100%" }} className="box2">
-              <img src={props.styledImage} loading="lazy" alt="#" srcset="#" />
+            <motion.div style={{ y: y1, x: "-100%" , backgroundImage: `url(${props.styledImage1})`}} className="box2">
+              
             </motion.div>
             <img
               className="work_frame__image"
@@ -88,19 +89,19 @@ const Works = (props) => {
           </div>
         ) : props.styled === "reversed_default" ? (
           <div className="work_frame ">
-            <motion.div style={{ y: y2, x: "50%" }} className="box1">
-              {" "}
-              <img src={props.styledImage} loading="lazy" alt="#" srcset="#" />
+            <motion.div style={{ y: y2, x: "50%" , backgroundImage: `url(${props.styledImage1})`}} className="box1">
+          
+              
             </motion.div>
             <motion.div
-              style={{ y: y1, x: "-100%" }}
+              style={{ y: y1, x: "-100%", backgroundImage: `url(${props.styledImage2})` }}
               className="box2"
             ></motion.div>
             <img
               className="work_frame__image"
               loading="lazy"
               src={props.img}
-              alt="#"
+              alt="#123"
             />
           </div>
         ):props.styled === "no-style" ? (
@@ -110,7 +111,7 @@ const Works = (props) => {
               className="work_frame__image"
               loading="lazy"
               src={props.img}
-              alt="#"
+              alt="#22"
             />
           </div>
         ):

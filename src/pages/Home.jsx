@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Works from "../components/Works";
 
@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       {/* <Header/> */}
-      <Hero h1="Hi there! I'm  Damir Farziev" />
+      <Hero data="I craft digital experiences for humans" />
 
       <Works
         workID="0x.bet"
@@ -14,7 +14,9 @@ const Home = () => {
         description="Новинка 2022 года! Современное и функциональное крипто-гейминг с минималистичным дизайном и удобным интерфейсом. Бонусы, круглосуточная поддержка, кешбек, а главное — безопасность! Продукт, который соответствует времени и дает игрокам ровно то, что им нужно."
         img="./0x.png"
         button_link="https://0x.bet/"
-        styled='style1'
+        styled='default'
+        styledImage1='./0x2.png'
+        styledImage2='./0x1.png'
       />
       <Works
         workID="Betibet.com"
@@ -23,6 +25,8 @@ const Home = () => {
         img="./betibet.png"
         button_link="https://betibet.com/"
         styled='reversed_default'
+        styledImage1='./betibet2.png'
+        styledImage2='./betibet1.png'
       />
 
       <Works
@@ -62,7 +66,9 @@ const Home = () => {
         description="Интернет-магазин с большим ассортиментом межкомнатных дверей и напольных покрытий, более 100 производителей. Продаем продукцию напрямую с 40+ складов наших партнеров. Работаем с юр лицами, доставляем собственным транспортом и через ТК по РФ. Действуют постоянные акции"
         img="./polmetra.png"
         button_link="https://Polmetra.ru/"
-        styled='no-style'
+        // styled='no-style'
+        styledImage2='./polmetra-1.png'
+        styledImage1='./polmetra-2.png'
       />
 
       <Works
@@ -73,7 +79,9 @@ const Home = () => {
         Мы сможем индивидуально подобрать разные варианты решения вашего вопроса."
         img="./dveri-i-dot.png"
         button_link="https://dveri-i.ru/"
-        styled='no-style'
+        // styled='no-style'
+        styledImage1='./dveri-i-dot-1.png'
+        styledImage2='./dveri-i-dot-2.png'
       />
 
       <Works
@@ -82,6 +90,7 @@ const Home = () => {
         description="Dovita Bridal is your one-stop solution to getting the perfect attire for the perfect day. Being an exclusive bridal boutique, we serve the Vaughan and Greater Toronto area, Ontario with our wide variety of inspiring wedding and evening dress collections."
         img="./dovita-i.png"
         button_link="https://dovitabridalcanada.com/"
+        styledImage2='./Romana.jpeg'
       />
 
       <Works

@@ -26,12 +26,12 @@ const About = () => {
       </p>
     </div>
     
-    <Multilayer/>
+    {/* <Multilayer/>
     <Multilayer styled='reversed_default'/>
     <Multilayer/>
     <Multilayer styled='style1'/>
     <Multilayer styled='no-style'/>
-    
+     */}
     </>
   )
 }

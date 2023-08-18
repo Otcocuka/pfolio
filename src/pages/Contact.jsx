@@ -4,7 +4,6 @@ import ContactLinks from "../components/ContactLinks"
 const Contact = () => {
   return (
     <>
-    <div>Contact</div>
     <ContactLinks/>
 
     <ContactForm/>

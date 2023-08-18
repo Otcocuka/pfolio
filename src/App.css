@@ -114,7 +114,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
+}
+.hero_text{
+  position: absolute;
+  bottom: 50%;
+  left: -27.5%;
+  font-size: 30rem;
+  color: #f8f8f894;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  font-size: 30rem;
+  font-weight: 900;
+  z-index: 1;
 }
 
 
@@ -202,18 +215,34 @@ body {
 
 
 .form{
-  height: 96vh;
+  height: 100vh;
   width: 70%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
-
-.input{
+.form_heading{
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.form_label{
+  color: black;
+  font-size: 0.8rem;
+}
+.form_input{
   display: block;
-  height: 100px;
+  padding: 1rem;
+  flex-basis: 15%;
   width: 100%;
   margin-bottom: 25px;
   border-radius: 3px;
@@ -221,10 +250,14 @@ body {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  color: rgba(0, 0, 0, 0.576);
+  background-color: cyan;
+  font-weight: 900;
 }
-.textarea{
+.form_textarea{
   display: block;
-  height: 200px;
+  padding: 1rem;
+  flex-basis: 40%;
   margin-bottom: 25px;
   width: 100%;
   border-radius: 3px;
@@ -232,6 +265,9 @@ body {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  color: rgba(0, 0, 0, 0.576);
+  background-color: cyan;
+  font-weight: 900;
 }
 
 .contact-links{
@@ -241,7 +277,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin: 0 auto;
+  margin: 0 auto;  
+  position: relative;
+  z-index: 0;
+}
+.contact-links_heading{
+  z-index: 2;
+  color: black;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.contact-links_text{
+  position: absolute;
+  bottom: 50%;
+  left: -70%;
+  font-size: 30rem;
+  color: #f8f8f894;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  font-weight: 900;
+  z-index: 1;
+}
+.contact-links_link{
+  z-index: 1;
 }
 .telegram-link{
   height: 100px;
@@ -398,7 +457,7 @@ margin-top: 1rem;
   -o-transform: translateX(-50px);
   position: absolute;
   top: 0;
-  background-image: url(/public/Laura.jpg);
+  /* background-image: url(/public/Laura.jpg); */
   background-size: 100% 100%;
 }
 
@@ -416,7 +475,7 @@ margin-top: 1rem;
   -o-transform: translateX(50px);
   position: absolute;
   bottom: 0;
-  background-image: url(/public/Laura.jpg);
+  /* background-image: url(/public/Laura.jpg); */
   background-size: 100% 100%;
 }
 

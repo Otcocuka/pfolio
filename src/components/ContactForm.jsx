@@ -28,8 +28,10 @@ const ContactForm = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <h2 className="form_heading">How can i help you?</h2>
+      <label className="form_label" htmlFor="name">Name *</label>
       <input
-        className="input"
+        className="form_input"
         type="text"
         id="name"
         name="name"
@@ -37,8 +39,9 @@ const ContactForm = () => {
         onChange={handleChange}
         required
       />
+      <label className="form_label" htmlFor="email">Email *</label>
       <input
-        className="input"
+        className="form_input"
         type="text"
         id="email"
         name="email"
@@ -46,8 +49,9 @@ const ContactForm = () => {
         onChange={handleChange}
         required
       />
+      <label className="form_label" htmlFor="message">Please, tell me what you're after *</label>
       <textarea
-        className="textarea"
+        className="form_textarea"
         id="message"
         name="message"
         value={formData.message}
