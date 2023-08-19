@@ -9,7 +9,7 @@ function ContactLinks() {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
 
     return (

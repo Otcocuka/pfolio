@@ -9,12 +9,12 @@ function Hero({data = "Hi there! I'm  Damir Farziev"}) {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+  const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
     <div className="hero">
       <motion.div style={{ x: y3 }} className="hero_text" id="text">2023</motion.div>
-        <h1 ref={ref}>{data}</h1>
+        <h1 className="hero_heading" ref={ref}>{data}</h1>
     </div>
   )
 }

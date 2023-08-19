@@ -28,7 +28,7 @@ const ContactForm = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h2 className="form_heading">How can i help you?</h2>
+      <h2 className="form_heading">How can I help you?</h2>
       <label className="form_label" htmlFor="name">Name *</label>
       <input
         className="form_input"

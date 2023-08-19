@@ -17,6 +17,7 @@ const Home = () => {
         styled='default'
         styledImage1='./0x2.png'
         styledImage2='./0x1.png'
+        backgroundText="0x.bet" 
       />
       <Works
         workID="Betibet.com"
@@ -27,6 +28,7 @@ const Home = () => {
         styled='reversed_default'
         styledImage1='./betibet2.png'
         styledImage2='./betibet1.png'
+        backgroundText="Betibet.com" 
       />
 
       <Works
@@ -35,6 +37,7 @@ const Home = () => {
         description="Продукт, сочетающий в себе онлайн-гейминг и платформу для ставок на спорт! Строгий и минималистичный интерфейс позволяет сконцентрироваться на сути игры и позволяет игрокам погружаться в свои эмоции от ставок или игр."
         img="./play-betibet.png"
         button_link="https://play.betibet.com/"
+        backgroundText="Play.betibet.com" 
       />
 
       <Works
@@ -44,6 +47,7 @@ const Home = () => {
         img="./bingo.png"
         button_link="https://bingobonga.com/"
         styled='style1'
+        backgroundText="Bingobonga.com" 
       />
 
       <Works
@@ -52,6 +56,7 @@ const Home = () => {
         description="Приветствуем вас в казино JackTop — самой горячей новинке 2023 года! Мы сделали все возможное, чтобы создать стильный и функциональный онлайн-гейминг проект с большим выбором игр, бонусов и удобным интерфейсом, который добавляет комфорта и удовольствия в игру. Наш уникальный персонаж и дизайн-решения позволят вашим игрокам наслаждаться неповторимым игровым опытом. Будучи новым казино на рынке, JackTop уже привлекло внимание игроков и обещает стать одним из лучших в индустрии."
         img="./jacktop.png"
         button_link="https://jacktop.com/"
+        backgroundText="Jacktop.com" 
       />
       <Works
         workID="Zotabet.com"
@@ -59,6 +64,7 @@ const Home = () => {
         description="Специально для наших посетителей из Австралии! Продукт, сочетающий в себе онлайн-гейминг и платформу для ставок, стильный и удобный интерфейс позволяет игрокам наслаждаться игрой в полную силу! Круглосуточная поддержка, выгодные бонусы и эмоции, эмоции, эмоции!"
         img="./zotabet.png"
         button_link="https://zotabet.com/"
+        backgroundText="Zotabet.com" 
       />
       <Works
         workID="Polmetra.ru"
@@ -69,6 +75,7 @@ const Home = () => {
         // styled='no-style'
         styledImage2='./polmetra-1.png'
         styledImage1='./polmetra-2.png'
+        backgroundText="Polmetra.ru" 
       />
 
       <Works
@@ -82,15 +89,17 @@ const Home = () => {
         // styled='no-style'
         styledImage1='./dveri-i-dot-1.png'
         styledImage2='./dveri-i-dot-2.png'
+        backgroundText="Двери и точка" 
       />
 
       <Works
-        workID="Dovita"
+        workID="Dovita Bridal Canada"
         tags={["building", "motion", "direction"]}
         description="Dovita Bridal is your one-stop solution to getting the perfect attire for the perfect day. Being an exclusive bridal boutique, we serve the Vaughan and Greater Toronto area, Ontario with our wide variety of inspiring wedding and evening dress collections."
         img="./dovita-i.png"
         button_link="https://dovitabridalcanada.com/"
         styledImage2='./Romana.jpeg'
+        backgroundText="Dovita Bridal Canada" 
       />
 
       <Works
@@ -100,6 +109,7 @@ const Home = () => {
         "
         img="./codersafe.png"
         button_link="https://codersafe.ru/"
+        backgroundText="Codersafe.ru" 
       />
 
       <Works
@@ -108,13 +118,15 @@ const Home = () => {
         description="did it long time ago"
         img="./uber.png"
         button_link=""
+        backgroundText="Uber777.Moscow.ru" 
       />
       <Works
         workID="Sanri.ru"
         tags={["building", "motion", "direction"]}
-        description="did it long time ago"
+        description="Рекламное агентство полного цикла, основанное в 1995 году"
         img="./sanri.png"
         button_link=""
+        backgroundText="Sanri.ru" 
       />
       <Works
         workID="Known.sg"
@@ -122,9 +134,8 @@ const Home = () => {
         description="did it long time ago"
         img="./known.png"
         button_link=""
+        backgroundText="Known.sg" 
       />
-
-      <Works />
     </>
   );
 };
