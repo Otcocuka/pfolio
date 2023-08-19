@@ -135,6 +135,7 @@ body {
   font-size: 25rem;
   font-weight: 900;
   z-index: -1;
+  pointer-events: none;
 }
 
 
@@ -311,6 +312,7 @@ body {
   white-space: nowrap;
   font-weight: 900;
   z-index: -1;
+  pointer-events: none;
 }
 .contact-links_link{
   z-index: 1;
@@ -502,4 +504,5 @@ margin-top: 1rem;
   font-size: 25rem;
   font-weight: 900;
   z-index: -1;
+  pointer-events: none;
 }
