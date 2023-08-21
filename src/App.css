@@ -595,7 +595,7 @@ body {
   }
   .works {
     flex-direction: column;
-    margin-bottom: 30rem;
+    margin-bottom: 10rem;
   }
   .works_name>div {
     font-size: 2rem;
@@ -616,15 +616,21 @@ body {
     pointer-events: none;
   }
   .work_frame__image{
-    min-width: 88vw;
-  }
+    min-width: 150vw;
+    max-height: 50vh;
+    transform: translateX(15%);
+    -webkit-transform: translateX(15%);
+    -moz-transform: translateX(15%);
+    -ms-transform: translateX(15%);
+    -o-transform: translateX(15%);
+}
   .box1 {
     width: 5rem;
     height: 6.5rem;
     border-radius: 1em;
     background-color: turquoise;
     position: absolute;
-    top: 75%;
+    top: 50%;
     left: 60%;
     background-size: 100% 100%;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
@@ -637,15 +643,16 @@ body {
     border-radius: 1em;
     background-color: #f9f07e;
     position: absolute;
-    bottom: -70%;
+    bottom: -5%;
     right: 35%;
     background-size: 100% 100%;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-    z-index: 0;
+    z-index: 1;
   }
   .work_card{
     max-width: 75%;
   }
+
   .contact-links_heading{
     font-size: 3rem;
   }
@@ -703,6 +710,9 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
+  }
+  .form{
+    width: 95%;
   }
   /* Ваши стили для средних ноутбуков и больших планшетов */
 }
