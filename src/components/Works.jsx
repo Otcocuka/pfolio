@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import AnimatedTextWord from "./AnimatedTextWord";
 
 const Works = (props) => {
   Works.defaultProps = {
@@ -21,11 +22,9 @@ const Works = (props) => {
     offset: ["start end", "end start"],
   });
 
-  
-
   const y1 = useTransform(scrollYProgress, [0, 1], ["0", "-50%"]);
   const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-// анимация ховер картинок над wo
+  // анимация ховер картинок над wo
   const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
   // анимация текста на бекграунде
 
@@ -35,6 +34,7 @@ const Works = (props) => {
       text.style.transform = `translatex(${progress}*1px)`;
     }
   });
+  console.log(props.description);
 
   return (
     <>
@@ -43,18 +43,28 @@ const Works = (props) => {
           {props.backgroundText}
         </motion.div>
         <div className="work_card" ref={ref}>
-          <div className="work_header">
-            <h2 className="works_name">{props.workID}</h2>
+          <div className="work_header"><AnimatedTextWord class='works_name' text={props.workID}/>
             <div className="work_tags">
               {props.tags.map((tag) => (
-                <span key={tag.toString()} className="tag">
+                <motion.div
+                  whileInView={{ y:0,opacity: 1 }}
+                  initial={{ opacity: 0, y:"1rem" }}
+                  transition={{
+                    duration: 0.2,
+                    delay:0.1,
+                  }}
+                  viewport={{ once: false }}
+                  key={tag.toString()}
+                  className="tag"
+                >
                   {tag}
-                </span>
+                </motion.div>
+                
               ))}
             </div>
           </div>
           <div className="work_body">
-            <div className="work_description">{props.description}</div>
+            <AnimatedTextWord class="work_description" text={props.description} />
             <div className="work_button__demo">
               <a
                 href={props.button_link}

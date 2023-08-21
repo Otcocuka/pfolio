@@ -77,12 +77,16 @@ const Root=()=> {
   return(
     <>
     <div className={`header ${ scrollDirection === "down" ? "hide" : "show"}`}>
+      <div className="header_link_container">
       <Link className='header_link' to='/pfolio/'>Home</Link>
-      <Link className='header_link' to='/pfolio/contact'>Contacts</Link>
+      <Link className='header_link' to='/pfolio/contact'>Contact</Link>
       <Link className='header_link' to='/pfolio/about'>About</Link>
+      </div>
+      
+      <div className="header_link_container">
       <Link className='header_link' to='/pfolio/resume'>Resume</Link>
       <Link className='header_link' to='/pfolio/helpyourself'>HelpYourself</Link>
-      
+      </div>
     </div>
     <div>    
 

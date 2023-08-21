@@ -1,6 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Hero from "../components/Hero";
-function HelpYourself() {
+import { motion,useScroll, useTransform } from "framer-motion";
+import AnimatedTextWord from "../components/AnimatedTextWord";
+function HelpYourself(props) {
+
+
+  const backgroundText= "Mistakes are a path to wisdom"
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+
+
   const [data, setData] = useState();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -66,11 +80,17 @@ function HelpYourself() {
     <>
       <Hero
         data={"HelpYourself: get a random common frontend interview question"}
+        backgroundText='Try Me'
       />
       <div className="helpYourself">
         {/* свяжите чекбоксы с обработчиком */}
+    <motion.div style={{ x: y3 }}  id="text" className="helpYourself_background_text_container">
+        
+        <AnimatedTextWord class='helpYourself_background_text' text={backgroundText}/>
+      
+      </motion.div>
 
-        <div className="choose_category">
+        <div className="choose_category" ref={ref}>
           {isSubmitClicked && selectedCategory === "" && (
             <div className="hidden_block">Please select category.</div>
           )}
@@ -85,7 +105,7 @@ function HelpYourself() {
             />
 
             <label className="label" htmlFor="html">
-              html
+              HTML
             </label>
           </div>
           <div>
@@ -97,7 +117,7 @@ function HelpYourself() {
             onChange={() => handleCheckboxChange("css")}
           />
           <label className="label" htmlFor="css">
-            css
+            CSS
           </label>
           </div>
           <div>
@@ -109,7 +129,7 @@ function HelpYourself() {
             onChange={() => handleCheckboxChange("js")}
           />
           <label className="label" htmlFor="js">
-            js
+            JS
           </label>
           </div>
           <button

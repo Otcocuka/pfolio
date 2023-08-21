@@ -1,8 +1,11 @@
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-function Hero({data = "Hi there! I'm  Damir Farziev"}) {
+function Hero(props) {
+  Hero.defaultProps = {
+    data: "Hi there! I'm  Damir Farziev",
+    backgroundText: "2023",
+  };
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -13,10 +16,14 @@ function Hero({data = "Hi there! I'm  Damir Farziev"}) {
 
   return (
     <div className="hero">
-      <motion.div style={{ x: y3 }} className="hero_text" id="text">2023</motion.div>
-        <h1 className="hero_heading" ref={ref}>{data}</h1>
+      <motion.div style={{ x: y3 }} className="hero_text" id="text">
+        {props.backgroundText}
+      </motion.div>
+      <h1 className="hero_heading" ref={ref}>
+        {props.data}
+      </h1>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
