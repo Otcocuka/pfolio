@@ -75,7 +75,7 @@ const Root=()=> {
 
   
   return(
-    <>
+    <div className='container'>
     <div className={`header ${ scrollDirection === "down" ? "hide" : "show"}`}>
       <div className="header_link_container">
       <Link className='header_link' to='/pfolio/'>Home</Link>
@@ -93,7 +93,7 @@ const Root=()=> {
       <Outlet/>
     
     </div>
-    </>
+    </div>
   )
 }
 

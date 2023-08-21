@@ -34,11 +34,10 @@ const Works = (props) => {
       text.style.transform = `translatex(${progress}*1px)`;
     }
   });
-  console.log(props.description);
 
   return (
     <>
-      <div className="works">
+      <div className="works" >
         <motion.div style={{ x: y3 }} className="works_text" id="text">
           {props.backgroundText}
         </motion.div>

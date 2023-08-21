@@ -79,7 +79,7 @@ function HelpYourself(props) {
   return (
     <>
       <Hero
-        data={"HelpYourself: get a random common frontend interview question"}
+        data={"Get a random common frontend interview question"}
         backgroundText='Try Me'
       />
       <div className="helpYourself">
