@@ -1,7 +1,8 @@
 // import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Works from "../components/Works";
-
+import ContactLinks from "../components/ContactLinks"
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
@@ -50,6 +51,9 @@ const Home = () => {
         description="Продукт, сочетающий в себе онлайн-гейминг и платформу для ставок на спорт! Строгий и минималистичный интерфейс позволяет сконцентрироваться на сути игры и позволяет игрокам погружаться в свои эмоции от ставок или игр."
         img="./play-betibet.png"
         button_link="https://play.betibet.com/"
+        styled="reversed_default"
+        styledImage1="./betibet2.png"
+        styledImage2="./betibet1.png"
         backgroundText="Play.betibet.com"
       />
 
@@ -121,6 +125,9 @@ const Home = () => {
         description="did it long time ago"
         img="./uber.png"
         button_link=""
+        styled="default"
+        styledImage1="./betibet2.png"
+        styledImage2="./betibet1.png"
         backgroundText="Uber777.Moscow.ru"
       />
       <Works
@@ -129,6 +136,9 @@ const Home = () => {
         description="Рекламное агентство полного цикла, основанное в 1995 году"
         img="./sanri.png"
         button_link=""
+        styled="default"
+        styledImage1="./betibet2.png"
+        styledImage2="./betibet1.png"
         backgroundText="Sanri.ru"
       />
       <Works
@@ -137,8 +147,13 @@ const Home = () => {
         description="did it long time ago"
         img="./known.png"
         button_link=""
+        styled="default"
+        styledImage1="./betibet2.png"
+        styledImage2="./betibet1.png"
         backgroundText="Known.sg"
       />
+      <ContactLinks/>
+      <Footer/>
     </>
   );
 };
