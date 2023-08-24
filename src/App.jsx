@@ -1,5 +1,5 @@
 import {  useEffect, useState, React} from 'react';
-import { BrowserRouter as Router, Route, useLocation, Link, Routes, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet } from 'react-router-dom';
 import "./App.css";
 import loadable from '@loadable/component'
 

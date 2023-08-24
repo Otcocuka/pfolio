@@ -548,6 +548,11 @@ body {
 
 
 
+
+
+
+
+
 @media (min-width: 320px) and (max-width: 426px) {
   * {
     font-size: 16px;
@@ -671,10 +676,15 @@ body {
     flex-direction: column;
     justify-content: start;
   }
-  .question_wrapper{
+  .question_wrapper {
     flex-direction: column;
-    flex-basis: 20%;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    flex-basis: 90%;
+    z-index: 1;
   }
   .question {
     font-size: 0.6rem;
@@ -744,6 +754,11 @@ body {
 }
 
 
+
+
+
+
+
 /* Мобильные устройства */
 @media (min-width: 427px) {
   * {
@@ -754,12 +769,24 @@ body {
 
 
 
+
+
+
+
 @media (min-width: 768px) and (max-width: 991px) {
   * {
     font-size: 25px;
   }
   /* Ваши стили для средних ноутбуков и больших планшетов */
 }
+
+
+
+
+
+
+
+
 
 @media (min-width: 427px) and (max-width: 992px){
 
@@ -857,20 +884,69 @@ body {
     z-index: -1;
     pointer-events: none;
   }
-
+    .question_wrapper {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: 100%;
+      flex-basis: 70%;
+      z-index: 1;
+    }
+  .helpYourself{
+    flex-direction: column;
+    justify-content: start;
+  }
 }
 
-/* Средние ноутбуки и большие планшеты */
-@media (min-width: 1440px){
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1600px){
   * {
     font-size: 25px;
   }
+  .question_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    flex-basis: 70%;
+    z-index: 1;
+  }
 }
+/* Средние ноутбуки и большие планшеты */
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 1600px){
   * {
     font-size: 30px;
     line-height: 30px;
+  }
+  .question_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    flex-basis: 70%;
+    z-index: 1;
   }
 }

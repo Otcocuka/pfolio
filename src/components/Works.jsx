@@ -41,7 +41,7 @@ const Works = (props) => {
         <motion.div style={{ x: y3 }} className="works_text" id="text">
           {props.backgroundText}
         </motion.div>
-        <div className="work_card" >
+        <div className="work_card" ref={ref}>
           <div className="work_header"><AnimatedTextWord class='works_name' text={props.workID}/>
             <div className="work_tags">
               {props.tags.map((tag) => (
@@ -76,7 +76,7 @@ const Works = (props) => {
           </div>
         </div>
         {props.styled === "default" ? (
-          <div className="work_frame " ref={ref}>
+          <div className="work_frame ">
             <motion.div
               style={{
                 y: y1,
@@ -101,7 +101,7 @@ const Works = (props) => {
             />
           </div>
         ) : props.styled === "style1" ? (
-          <div className="work_frame " ref={ref}>
+          <div className="work_frame ">
             <motion.div
               style={{
                 y: y1,
@@ -118,7 +118,7 @@ const Works = (props) => {
             />
           </div>
         ) : props.styled === "reversed_default" ? (
-          <div className="work_frame " ref={ref}>
+          <div className="work_frame ">
             <motion.div
               style={{
                 y: y2,
@@ -143,7 +143,7 @@ const Works = (props) => {
             />
           </div>
         ) : props.styled === "no-style" ? (
-          <div className="work_frame " ref={ref}>
+          <div className="work_frame ">
             <img
               className="work_frame__image"
               loading="lazy"
