@@ -1,1 +1,0 @@
-import{j as s}from"./index-4fbfb6b9.js";import{M as r}from"./MyResume-3029400e.js";import{C as t}from"./ContactForm-123fa0b8.js";const e=()=>s.jsx(s.Fragment,{children:s.jsxs("div",{className:"about",children:[s.jsx(r,{}),s.jsx(t,{})]})});export{e as default};
