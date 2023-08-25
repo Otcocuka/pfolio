@@ -7,6 +7,8 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false); 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
@@ -24,7 +26,20 @@ const ContactForm = () => {
   let request = new XMLHttpRequest();
   request.open("GET", urlString);
   request.send();
+  setIsSubmitted(true); 
+  if (isSubmitted) {
+    return; // Если форма уже отправлена, не выполняем действия повторно
+  }
+
+
+  console.log(formData);
+
+
   };
+
+
+
+  
 
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -59,7 +74,7 @@ const ContactForm = () => {
         required
       />
       
-      <button className="button-primary">Send</button>
+      <button disabled={isSubmitted} className="button-primary">{isSubmitted ? "Data sent" : "Send"}</button>
     </form>
   );
 };

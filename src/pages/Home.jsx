@@ -186,7 +186,7 @@ const Home = () => {
         backgroundText="Known.sg"
       />
       <ContactLinks />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
