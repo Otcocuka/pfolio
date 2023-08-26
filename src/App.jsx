@@ -86,7 +86,7 @@ const Root = () => {
           <Link className="header_link" to="/pfolio/resume">
             Resume
           </Link>
-          <Link className="header_link" to="/pfolio/helpyourself">
+          <Link className="header_link highlight" to="/pfolio/helpyourself">
             HelpYourself
           </Link>
         </div>

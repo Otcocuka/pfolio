@@ -86,6 +86,7 @@ const About = () => {
         project management finesse, I&apos;m here to bring that vision to life.
         Let&apos;s connect and explore the exciting possibilities ahead!
       </p>
+      <h2 className="highlight">I am driven by a strong passion for web development and a commitment to continuous growth. My goal is to excel in the field, consistently delivering exceptional results for every project I undertake.</h2>
     </div>
   );
 };
