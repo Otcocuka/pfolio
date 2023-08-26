@@ -41,7 +41,7 @@ const Works = (props) => {
         <motion.div style={{ x: y3 }} className="works_text" id="text">
           {props.backgroundText}
         </motion.div>
-        <div className="work_card" ref={ref}>
+        <div className="work_card" >
           <div className="work_header"><AnimatedTextWord class='works_name' text={props.workID}/>
             <div className="work_tags">
               {props.tags.map((tag) => (
@@ -93,7 +93,7 @@ const Works = (props) => {
               }}
               className="box2"
             ></motion.div>
-            <img
+            <img ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
@@ -110,7 +110,7 @@ const Works = (props) => {
               }}
               className="box2"
             ></motion.div>
-            <img
+            <img ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
@@ -135,7 +135,7 @@ const Works = (props) => {
               }}
               className="box2"
             ></motion.div>
-            <img
+            <img ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
@@ -144,7 +144,7 @@ const Works = (props) => {
           </div>
         ) : props.styled === "no-style" ? (
           <div className="work_frame ">
-            <img
+            <img ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
