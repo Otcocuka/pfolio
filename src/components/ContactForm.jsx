@@ -7,7 +7,7 @@ const ContactForm = () => {
     message: "",
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false); 
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,33 +18,28 @@ const ContactForm = () => {
     e.preventDefault();
     console.log(formData);
     let apiToken = "6091232201:AAFeK7pA7uJID96rEkiMmH649rdLvE4Pyo0";
-  let chatId = "@salskdjhhakgjfhakjhwkdjbmzxjchzb";
-  let text = `email:${formData.email};  name:${formData.name};  message:${formData.message};`;
+    let chatId = "@salskdjhhakgjfhakjhwkdjbmzxjchzb";
+    let text = `email:${formData.email};  name:${formData.name};  message:${formData.message};`;
 
-  let urlString = `https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${text}`;
+    let urlString = `https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${text}`;
 
-  let request = new XMLHttpRequest();
-  request.open("GET", urlString);
-  request.send();
-  setIsSubmitted(true); 
-  if (isSubmitted) {
-    return; // Если форма уже отправлена, не выполняем действия повторно
-  }
+    let request = new XMLHttpRequest();
+    request.open("GET", urlString);
+    request.send();
+    setIsSubmitted(true);
+    if (isSubmitted) {
+      return; // Если форма уже отправлена, не выполняем действия повторно
+    }
 
-
-  console.log(formData);
-
-
+    console.log(formData);
   };
-
-
-
-  
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h2 className="form_heading">How can I help you?</h2>
-      <label className="form_label" htmlFor="name">Name *</label>
+      <label className="form_label" htmlFor="name">
+        Name *
+      </label>
       <input
         className="form_input"
         type="text"
@@ -54,7 +49,9 @@ const ContactForm = () => {
         onChange={handleChange}
         required
       />
-      <label className="form_label" htmlFor="email">Email *</label>
+      <label className="form_label" htmlFor="email">
+        Email *
+      </label>
       <input
         className="form_input"
         type="text"
@@ -64,7 +61,9 @@ const ContactForm = () => {
         onChange={handleChange}
         required
       />
-      <label className="form_label" htmlFor="message">Please, tell me what you're after *</label>
+      <label className="form_label" htmlFor="message">
+        Please, tell me what you&apos;re after *
+      </label>
       <textarea
         className="form_textarea"
         id="message"
@@ -73,8 +72,10 @@ const ContactForm = () => {
         onChange={handleChange}
         required
       />
-      
-      <button disabled={isSubmitted} className="button-primary">{isSubmitted ? "Data sent" : "Send"}</button>
+
+      <button disabled={isSubmitted} className="button-primary">
+        {isSubmitted ? "Data sent" : "Send"}
+      </button>
     </form>
   );
 };

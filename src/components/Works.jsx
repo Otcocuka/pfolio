@@ -24,9 +24,9 @@ const Works = (props) => {
 
   const y1 = useTransform(scrollYProgress, [0, 1], ["0", "-50%"]);
   const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-  // анимация ховер картинок над wo
+  //  work_frame hovering animation variable
   const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
-  // анимация текста на бекграунде
+  // background text animation variable
 
   const text = document.getElementById("text");
   scroll((progress) => {
@@ -37,20 +37,21 @@ const Works = (props) => {
 
   return (
     <>
-      <div className="works" >
+      <div className="works">
         <motion.div style={{ x: y3 }} className="works_text" id="text">
           {props.backgroundText}
         </motion.div>
-        <div className="work_card" >
-          <div className="work_header"><AnimatedTextWord class='works_name' text={props.workID}/>
+        <div className="work_card">
+          <div className="work_header">
+            <AnimatedTextWord class="works_name" text={props.workID} />
             <div className="work_tags">
               {props.tags.map((tag) => (
                 <motion.div
-                  whileInView={{ y:0,opacity: 1 }}
-                  initial={{ opacity: 0, y:"1rem" }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  initial={{ opacity: 0, y: "1rem" }}
                   transition={{
                     duration: 0.2,
-                    delay:0.1,
+                    delay: 0.1,
                   }}
                   viewport={{ once: false }}
                   key={tag.toString()}
@@ -58,12 +59,14 @@ const Works = (props) => {
                 >
                   {tag}
                 </motion.div>
-                
               ))}
             </div>
           </div>
           <div className="work_body">
-            <AnimatedTextWord class="work_description" text={props.description} />
+            <AnimatedTextWord
+              class="work_description"
+              text={props.description}
+            />
             <div className="work_button__demo">
               <a
                 href={props.button_link}
@@ -93,7 +96,8 @@ const Works = (props) => {
               }}
               className="box2"
             ></motion.div>
-            <img ref={ref}
+            <img
+              ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
@@ -110,7 +114,8 @@ const Works = (props) => {
               }}
               className="box2"
             ></motion.div>
-            <img ref={ref}
+            <img
+              ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
@@ -135,7 +140,8 @@ const Works = (props) => {
               }}
               className="box2"
             ></motion.div>
-            <img ref={ref}
+            <img
+              ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
@@ -144,7 +150,8 @@ const Works = (props) => {
           </div>
         ) : props.styled === "no-style" ? (
           <div className="work_frame ">
-            <img ref={ref}
+            <img
+              ref={ref}
               className="work_frame__image"
               loading="lazy"
               src={props.img}
@@ -152,7 +159,7 @@ const Works = (props) => {
             />
           </div>
         ) : (
-          <div>succ1</div>
+          <div>Component is corrupt</div>
         )}
       </div>
     </>

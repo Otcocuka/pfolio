@@ -1,12 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const AnimatedTextWord = (props) => {
-
-    
-
-
-    
   const words = props.text.split(" ");
 
   // Variants for Container of words.
@@ -14,7 +8,7 @@ const AnimatedTextWord = (props) => {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.01, delayChildren: 0.04 * i },
     }),
   };
 
@@ -42,18 +36,18 @@ const AnimatedTextWord = (props) => {
 
   return (
     <motion.div
-        className={props.class}
-      style={{  display: "flex", flexWrap:'wrap' }}
+      className={props.class}
+      style={{ display: "flex", flexWrap: "wrap" }}
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false }}
     >
       {words.map((word, index) => (
-        <motion.div 
+        <motion.div
           variants={child}
           key={index}
-          style={{  margin: "0 2px" }} // Добавлено для разделения слов
+          style={{ margin: "0 2px" }} // Добавлено для разделения слов
         >
           {word}
         </motion.div>

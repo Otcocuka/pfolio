@@ -1,8 +1,6 @@
-// import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Works from "../components/Works";
 import ContactLinks from "../components/ContactLinks";
-import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
@@ -27,7 +25,8 @@ const Home = () => {
       <Works
         workID="0x Bet Casino"
         tags={["maintenance", "innovation", "management", "design", "SEO"]}
-        description="Новинка 2022 года! Современное и функциональное крипто-гейминг с минималистичным дизайном и удобным интерфейсом. Бонусы, круглосуточная поддержка, кешбек, а главное — безопасность! Продукт, который соответствует времени и дает игрокам ровно то, что им нужно."
+        description="Introducing the New Arrival of 2022!
+        Experience modern and functional crypto-gaming with a minimalist design and user-friendly interface. Our cutting-edge product offers bonuses, round-the-clock support, cashback, and, most importantly, top-notch security. It's a product that aligns with the times, providing players with exactly what they need."
         img="./0x.png"
         button_link="https://0x.bet/"
         styled="default"
@@ -38,7 +37,7 @@ const Home = () => {
       <Works
         workID="Beti Bet Bookmaker"
         tags={["maintenance", "innovation", "management", "design", "SEO"]}
-        description="Продукт, сочетающий в себе онлайн-гейминг и платформу для ставок на спорт! Строгий и минималистичный интерфейс позволяет сконцентрироваться на сути игры и позволяет игрокам погружаться в свои эмоции от ставок или игр."
+        description="An innovative fusion of online gaming and sports betting platform! The sleek and minimalist interface allows players to focus on the essence of the game, immersing themselves in the excitement of bets and gameplay."
         img="./betibet.png"
         button_link="https://betibet.com/"
         styled="reversed_default"
@@ -50,7 +49,7 @@ const Home = () => {
       <Works
         workID="Beti Bet Casino"
         tags={["maintenance", "innovation", "management", "design", "SEO"]}
-        description="Продукт, сочетающий в себе онлайн-гейминг и платформу для ставок на спорт! Строгий и минималистичный интерфейс позволяет сконцентрироваться на сути игры и позволяет игрокам погружаться в свои эмоции от ставок или игр."
+        description="Introducing a groundbreaking product that seamlessly combines online gaming with a sports betting platform! With its sleek and minimalist interface, players can immerse themselves in the essence of the game, allowing for an immersive experience that heightens the thrill of both bets and gameplay."
         img="./play-betibet.png"
         button_link="https://play.betibet.com/"
         styled="reversed_default"
@@ -62,7 +61,7 @@ const Home = () => {
       <Works
         workID="Bingo Bonga Casino"
         tags={["maintenance", "innovation", "management", "design", "SEO"]}
-        description="Онлайн-гейминг еще никогда не был таким веселым! Множество увлекательных игр, круглосуточная поддержка, честная и веселая игра, классные бонусы — это лишь малая часть того, что есть в BingoBonga!"
+        description="Online gaming has never been this enjoyable! Explore a multitude of captivating games, backed by round-the-clock support, fair and enjoyable gameplay, and fantastic bonuses – just a glimpse of what BingoBonga has to offer."
         img="./bingo.png"
         button_link="https://bingobonga.com/"
         styled="style1"
@@ -73,7 +72,7 @@ const Home = () => {
       <Works
         workID="Jack Top Casino"
         tags={["maintenance", "innovation", "management", "design", "SEO"]}
-        description="Приветствуем вас в казино JackTop — самой горячей новинке 2023 года! Мы сделали все возможное, чтобы создать стильный и функциональный онлайн-гейминг проект с большим выбором игр, бонусов и удобным интерфейсом, который добавляет комфорта и удовольствия в игру. Наш уникальный персонаж и дизайн-решения позволят вашим игрокам наслаждаться неповторимым игровым опытом. Будучи новым казино на рынке, JackTop уже привлекло внимание игроков и обещает стать одним из лучших в индустрии."
+        description="Welcome to JackTop Casino – the hottest addition of 2023! We've gone the extra mile to create a stylish and functional online gaming project, offering a vast selection of games, bonuses, and a user-friendly interface that enhances comfort and enjoyment during gameplay. Our unique character and design solutions promise an unparalleled gaming experience for your players. As a new player in the market, JackTop has already captured the attention of gamers and aims to become a top player in the industry."
         img="./jacktop.png"
         button_link="https://jacktop.com/"
         styled="style1"
@@ -84,7 +83,7 @@ const Home = () => {
       <Works
         workID="Zota Bet Casino"
         tags={["maintenance", "innovation", "management", "design", "SEO"]}
-        description="Специально для наших посетителей из Австралии! Продукт, сочетающий в себе онлайн-гейминг и платформу для ставок, стильный и удобный интерфейс позволяет игрокам наслаждаться игрой в полную силу! Круглосуточная поддержка, выгодные бонусы и эмоции, эмоции, эмоции!"
+        description="Especially tailored for our visitors from Australia! Introducing a product that seamlessly combines online gaming with a sports betting platform. With its stylish and user-friendly interface, players can fully immerse themselves in the game. Round-the-clock support, enticing bonuses, and a flood of emotions await at every turn!"
         img="./zotabet.png"
         button_link="https://zotabet.com/"
         styled="default"
@@ -95,7 +94,7 @@ const Home = () => {
       <Works
         workID="Polmetra"
         tags={["development", "management", "design"]}
-        description="Интернет-магазин с большим ассортиментом межкомнатных дверей и напольных покрытий, более 100 производителей. Продаем продукцию напрямую с 40+ складов наших партнеров. Работаем с юр лицами, доставляем собственным транспортом и через ТК по РФ. Действуют постоянные акции"
+        description="We present an online store featuring an extensive range of interior doors and flooring options from over 100 manufacturers. Our unique offering stems from direct partnerships with 40+ warehouses, ensuring swift delivery from our partners' facilities. Serving both corporate entities and individuals, we provide delivery through our fleet and third-party courier services across the Russian Federation. Explore ongoing promotions as part of our commitment to exceptional value."
         img="./polmetra.png"
         button_link="https://Polmetra.ru/"
         styled="reversed_default"
@@ -107,9 +106,7 @@ const Home = () => {
       <Works
         workID="Двери и Точка"
         tags={["development", "management", "design"]}
-        description="Чётко отлаженные поставки, высокий уровень клиентского сервиса, тщательный подбор ассортимента, конкурентные цены – эти и многие другие особенности подхода к делу позволяют нам занимать лидирующие позиции на рынке продажи дверей и напольных покрытий.
-
-        Мы сможем индивидуально подобрать разные варианты решения вашего вопроса."
+        description="Precisely streamlined deliveries, a high level of customer service, meticulous assortment curation, and competitive pricing – these and many other distinctive features characterize our approach to business, enabling us to secure leading positions in the doors and flooring market. We have the ability to individually tailor various solution options to address your specific needs."
         img="./dveri-i-dot.png"
         button_link="https://dveri-i.ru/"
         styled="default"
@@ -133,9 +130,9 @@ const Home = () => {
       <Works
         workID="Eccmarket"
         tags={["project managing", "development", "content management"]}
-        description="did it long time ago"
+        description="EccMarket - Engineering Consulting Center. A New Industrial Standard on Your Desk."
         img="./eccmarket.png"
-        button_link=""
+        button_link="https://www.eccmarket.ru/"
         styled="default"
         styledImage1="./eccmarket-1.png"
         styledImage2="./eccmarket-2.png"
@@ -144,7 +141,7 @@ const Home = () => {
       <Works
         workID="Lunch-Time"
         tags={["project managing", "development", "content management"]}
-        description="did it long time ago"
+        description="With a track record dating back to 1999, we specialize in the field of meal delivery and catering. We have perfected a model service for delivering hot meals to offices, as well as providing delicious and satisfying food for tour groups and catering events."
         img="./lunchtime.png"
         button_link=""
         styled="reversed_default"
@@ -155,7 +152,7 @@ const Home = () => {
       <Works
         workID="Uber777 Moscow"
         tags={["development", "design"]}
-        description="did it long time ago"
+        description="My first significant project. It all started here"
         img="./uber.png"
         button_link=""
         styled="reversed_default"
@@ -166,7 +163,7 @@ const Home = () => {
       <Works
         workID="Sanri"
         tags={["development"]}
-        description="Рекламное агентство полного цикла, основанное в 1995 году"
+        description="Reviving a vintage full-service advertising agency website founded in 1995. Paying homage to the times when table-based layout was the norm and not a shame."
         img="./sanri.png"
         button_link=""
         styled="style1"
@@ -179,14 +176,13 @@ const Home = () => {
         tags={["development"]}
         description="did it long time ago"
         img="./known.png"
-        button_link=""
+        button_link="https://otcocuka.github.io/Template/"
         styled="default"
         styledImage1="./known-1.png"
         styledImage2="./known-2.png"
         backgroundText="Known.sg"
       />
       <ContactLinks />
-      {/* <Footer /> */}
     </>
   );
 };

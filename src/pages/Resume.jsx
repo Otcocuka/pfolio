@@ -1,14 +1,13 @@
-import MyResume from "../components/MyResume"
-import ContactForm from "../components/ContactForm"
-
+import MyResume from "../components/MyResume";
+import ContactForm from "../components/ContactForm";
 
 const Resume = () => {
   return (
-    <div className="about"><MyResume/>
-    <ContactForm/></div>
-    
+    <div className="resume_page">
+      <MyResume />
+      <ContactForm />
+    </div>
+  );
+};
 
-  )
-}
-
-export default Resume
+export default Resume;

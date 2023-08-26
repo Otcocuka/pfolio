@@ -1,15 +1,14 @@
-import ContactForm from "../components/ContactForm"
-import ContactLinks from "../components/ContactLinks"
+import ContactForm from "../components/ContactForm";
+import ContactLinks from "../components/ContactLinks";
 
 const Contact = () => {
   return (
     <>
-    <ContactLinks/>
+      <ContactLinks />
 
-    <ContactForm/>
+      <ContactForm />
     </>
-  )
-}
+  );
+};
 
-export default Contact
-
+export default Contact;

@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import Hero from "../components/Hero";
-import { motion,useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import AnimatedTextWord from "../components/AnimatedTextWord";
-function HelpYourself(props) {
-
-
-  const backgroundText= "Mistakes are a path to wisdom"
+function HelpYourself() {
+  const backgroundText = "Mistakes are a path to wisdom";
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -13,7 +11,6 @@ function HelpYourself(props) {
     offset: ["start end", "end start"],
   });
   const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
-
 
   const [data, setData] = useState();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -80,15 +77,20 @@ function HelpYourself(props) {
     <>
       <Hero
         data={"Get a random common frontend interview question"}
-        backgroundText='Try Me'
+        backgroundText="Try Me"
       />
       <div className="helpYourself">
         {/* свяжите чекбоксы с обработчиком */}
-    <motion.div style={{ x: y3 }}  id="text" className="helpYourself_background_text_container">
-        
-        <AnimatedTextWord class='helpYourself_background_text' text={backgroundText}/>
-      
-      </motion.div>
+        <motion.div
+          style={{ x: y3 }}
+          id="text"
+          className="helpYourself_background_text_container"
+        >
+          <AnimatedTextWord
+            class="helpYourself_background_text"
+            text={backgroundText}
+          />
+        </motion.div>
 
         <div className="choose_category" ref={ref}>
           {isSubmitClicked && selectedCategory === "" && (
@@ -109,28 +111,28 @@ function HelpYourself(props) {
             </label>
           </div>
           <div>
-          <input
-            className="checkbox"
-            id="css"
-            type="checkbox"
-            checked={selectedCategory === "css"}
-            onChange={() => handleCheckboxChange("css")}
-          />
-          <label className="label" htmlFor="css">
-            CSS
-          </label>
+            <input
+              className="checkbox"
+              id="css"
+              type="checkbox"
+              checked={selectedCategory === "css"}
+              onChange={() => handleCheckboxChange("css")}
+            />
+            <label className="label" htmlFor="css">
+              CSS
+            </label>
           </div>
           <div>
-          <input
-            className="checkbox"
-            id="js"
-            type="checkbox"
-            checked={selectedCategory === "js"}
-            onChange={() => handleCheckboxChange("js")}
-          />
-          <label className="label" htmlFor="js">
-            JS
-          </label>
+            <input
+              className="checkbox"
+              id="js"
+              type="checkbox"
+              checked={selectedCategory === "js"}
+              onChange={() => handleCheckboxChange("js")}
+            />
+            <label className="label" htmlFor="js">
+              JS
+            </label>
           </div>
           <button
             className="choose_category_button button-primary"
