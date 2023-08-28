@@ -17,8 +17,8 @@ const Home = () => {
         img="./dovita-i.webp"
         button_link="https://dovitabridalcanada.com/"
         styled="default"
-        styledImage1="./Laura.jpg"
-        styledImage2="./Romana.jpeg"
+        styledImage1="./Laura.webp"
+        styledImage2="./Romana.webp"
         backgroundText="Dovita Bridal Canada"
       />
 

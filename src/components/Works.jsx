@@ -11,8 +11,8 @@ const Works = (props) => {
     img: "./dveri-i-dot.png",
     button_link: "#",
     styled: "default",
-    styledImage1: "./Laura.jpg",
-    styledImage2: "./Laura.jpg",
+    styledImage1: "./Laura.webp",
+    styledImage2: "./Laura.webp",
     backgroundText: "qweasdasdasdqweqwe",
   };
 
