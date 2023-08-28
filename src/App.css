@@ -622,7 +622,7 @@ font-size: 0.7rem;
 /* media */
 
 
-@media (min-width: 320px) and (max-width: 426px) {
+@media (min-width: 320px) and (max-width: 450px) {
   * {
     font-size: 16px;
     line-height: 16px;
@@ -806,7 +806,7 @@ font-size: 0.7rem;
 
 
 
-@media (min-width: 427px) {
+@media (min-width: 450px) {
   * {
     font-size: 18px;
     line-height: 18px;
@@ -823,7 +823,7 @@ font-size: 0.7rem;
 }
 
 
-@media (min-width: 427px) and (max-width: 992px){
+@media (min-width: 451px) and (max-width: 992px){
 
   .button-primary {
     color: white;
@@ -882,8 +882,8 @@ font-size: 0.7rem;
     border-radius: 1em;
     background-color: turquoise;
     position: absolute;
-    top: 100%;
-    left: 50%;
+    top: 40%;
+    left: 60%;
     background-size: 100% 100%;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
     z-index: 1;
@@ -895,12 +895,13 @@ font-size: 0.7rem;
     border-radius: 1em;
     background-color: #f9f07e;
     position: absolute;
-    bottom: -90%;
-    right: 30%;
+    bottom: 0;
+    right: 35%;
     background-size: 100% 100%;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
     z-index: 0;
   }
+
   .work_card{
     max-width: 40%;
   }
