@@ -48,12 +48,12 @@ const Works = (props) => {
               {props.tags.map((tag) => (
                 <motion.div
                   whileInView={{ y: 0, opacity: 1 }}
-                  initial={{ opacity: 0, y: "1rem" }}
+                  initial={{ opacity: 1, y: "1rem" }}
                   transition={{
                     duration: 0.2,
                     delay: 0.1,
                   }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   key={tag.toString()}
                   className="tag"
                 >

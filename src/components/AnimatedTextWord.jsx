@@ -5,7 +5,7 @@ const AnimatedTextWord = (props) => {
 
   // Variants for Container of words.
   const container = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: (i = 1) => ({
       opacity: 1,
       transition: { staggerChildren: 0.01, delayChildren: 0.04 * i },
@@ -24,7 +24,7 @@ const AnimatedTextWord = (props) => {
       },
     },
     hidden: {
-      opacity: 0,
+      opacity: 1,
       y: 20,
       transition: {
         type: "spring",
@@ -41,7 +41,7 @@ const AnimatedTextWord = (props) => {
       variants={container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false }}
+      viewport={{ once: true }}
     >
       {words.map((word, index) => (
         <motion.div
