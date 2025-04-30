@@ -1,0 +1,1 @@
+import{j as t}from"./index-ae2c622e.js";import{C as o}from"./ContactForm-abc2516a.js";import{C as r}from"./ContactLinks-5db3407f.js";import"./use-scroll-96e06de4.js";import"./motion-6def2733.js";const p=()=>t.jsxs(t.Fragment,{children:[t.jsx(r,{}),t.jsx(o,{})]});export{p as default};
